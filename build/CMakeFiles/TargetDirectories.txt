@@ -1,0 +1,4 @@
+/mnt/hgfs/shared/newGEANT/build/CMakeFiles/rebuild_cache.dir
+/mnt/hgfs/shared/newGEANT/build/CMakeFiles/edit_cache.dir
+/mnt/hgfs/shared/newGEANT/build/CMakeFiles/nsim.dir
+/mnt/hgfs/shared/newGEANT/build/CMakeFiles/nSimulation.dir
