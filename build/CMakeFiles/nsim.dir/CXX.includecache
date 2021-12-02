@@ -6,6 +6,16 @@
 
 #IncludeRegexTransform: 
 
+/mnt/hgfs/shared/newGEANT/action.cc
+action.hh
+/mnt/hgfs/shared/newGEANT/action.hh
+
+/mnt/hgfs/shared/newGEANT/action.hh
+G4VUserActionInitialization.hh
+/mnt/hgfs/shared/newGEANT/G4VUserActionInitialization.hh
+generator.hh
+/mnt/hgfs/shared/newGEANT/generator.hh
+
 /mnt/hgfs/shared/newGEANT/construction.cc
 construction.hh
 /mnt/hgfs/shared/newGEANT/construction.hh
@@ -61,6 +71,8 @@ construction.cc
 /mnt/hgfs/shared/newGEANT/construction.cc
 physics.cc
 /mnt/hgfs/shared/newGEANT/physics.cc
+action.cc
+/mnt/hgfs/shared/newGEANT/action.cc
 generator.cc
 /mnt/hgfs/shared/newGEANT/generator.cc
 G4MTRunManager.hh
@@ -3069,6 +3081,8 @@ globals.hh
 /usr/local/geant4.10.07.p02/include/Geant4/globals.hh
 rundefs.hh
 /usr/local/geant4.10.07.p02/include/Geant4/rundefs.hh
+
+/usr/local/geant4.10.07.p02/include/Geant4/G4VUserActionInitialization.hh
 
 /usr/local/geant4.10.07.p02/include/Geant4/G4VUserDetectorConstruction.hh
 globals.hh

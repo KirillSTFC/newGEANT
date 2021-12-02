@@ -6,7 +6,7 @@
 #include "G4UIExecutive.hh" //include ui lib u2
 #include "construction.cc" //include detector
 #include "physics.cc" //include physics
-//#include "action.cc"
+#include "action.cc"
 //#include "action.hh"
 #include "generator.cc"
 //#include "detector.hh"
@@ -21,21 +21,16 @@
 
 int main(int argc, char** argv)//This declaration is used when your program must take command-line arguments.
 {
-//#ifdef G4MULTITHREADED
-//G4MTRunManager *run = new G4MTRunManager();
-//#else
-G4RunManager *run = new G4RunManager(); //Run manager is the heart of geant 4. R4run manager takes care of all run actions, event actions, stepping actions. run is a new name(reference) for a class. Run itself is a CORE, KERNEL.
-//#endif
+G4MTRunManager *run = new G4MTRunManager();
 run -> SetNumberOfThreads(8);
-	run->SetUserInitialization(new MyDetectorConstruction());//we putting initialization classes to the run class. (setting initizalization).
-  run->SetUserInitialization(new MyPhysicsList());
-	run->SetUserAction(new MyPrimaryGenerator());
-	//run->SetUserInitialization(new MyActionInitialization());
-	G4UIExecutive *ui = new G4UIExecutive(argc, argv); //FOR UI. some input parameter i dont know for.
-	G4VisManager *visManager = new G4VisExecutive(); //for VIS
-	visManager->Initialize();//VIS initialization
-	G4UImanager *UImanager = G4UImanager::GetUIpointer();//something for UI
-	UImanager->ApplyCommand("/control/execute vis.mac");
-	ui->SessionStart(); //Start UI session
+run->SetUserInitialization(new MyDetectorConstruction());//we putting initialization classes to the run class. (setting initizalization).
+run->SetUserInitialization(new MyPhysicsList());
+run->SetUserInitialization(new MyActionInitialization());
+G4UIExecutive *ui = new G4UIExecutive(argc, argv); //FOR UI. some input parameter i dont know for.
+G4VisManager *visManager = new G4VisExecutive(); //for VIS
+visManager->Initialize();//VIS initialization
+G4UImanager *UImanager = G4UImanager::GetUIpointer();//something for UI
+UImanager->ApplyCommand("/control/execute vis.mac");
+ui->SessionStart(); //Start UI session
 return 0;
 }

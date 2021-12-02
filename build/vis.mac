@@ -17,5 +17,5 @@
 /vis/scene/add/scale 100 cm z 0 0 1 #//add scale
 /vis/scene/add/axes #add axes
 /vis/scene/add/eventID
-/vis/scene/endOfEventAction accumulate #//accumulate all runs
+/vis/scene/endOfEventAction accumulate 100 runs#//accumulate all runs
 /run/beamOn 700
