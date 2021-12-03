@@ -7,7 +7,7 @@
 /gps/pos/shape Circle
 /gps/pos/radius 0.0000000000001 um
 /gps/ang/type iso
-/gps/ang/maxtheta 20. deg
+/gps/ang/maxtheta 1. deg
 /gps/energy 0.1 MeV
 /vis/open OGL
 /vis/viewer/set/viewpointVector 0.8 0.8 1

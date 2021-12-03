@@ -8,7 +8,7 @@
 #include <G4PVPlacement.hh>								//this class fr location sicription
 #include <G4NistManager.hh>								//this class for material properties discription
 #include <G4LogicalVolume.hh>							//this class for world structure discription
-//#include "detector.hh"										//this is to connect it with sensitive detector, where we will fill the root files
+#include "detector.hh"										//this is to connect it with sensitive detector, where we will fill the root files
 #include "G4GenericMessenger.hh"					//this is to use variables in macro file later
 class MyDetectorConstruction : public G4VUserDetectorConstruction //We inherite it from G4VUserDetectorConstruction abstract class.
 {
@@ -18,7 +18,8 @@ public:
 	~MyDetectorConstruction(); //destructor
 G4LogicalVolume *GetScoringVolume() const {return fScoringVolume;} 	//this method should return a pointer of a scoringvolume. This is basically the same as the one bellow and we initialized return in brackets here.
 	virtual G4VPhysicalVolume* Construct(); 													// This method should return a pointer of PhysicalWorld
-	//virtual void ConstructSDandField();   														//SOME SPECIFIC FOR SENSITIVE DETECTOR OR MULTITHREADING, I AM NOT SURE
+private:
+	virtual void ConstructSDandField();   														//SOME SPECIFIC FOR SENSITIVE DETECTOR OR MULTITHREADING, I AM NOT SURE
 	void DefineMaterials(); //this is here because we declared this function in cc file. This is needed for loops and rewriting geometry without errors
 
 //********************************************************LIST OF POINTERS AND VARIABLES IN USE ********************************************//

@@ -32,6 +32,6 @@ lead_phys = new G4PVPlacement (0,G4ThreeVector(0,0,0),logicDetector,"lead_phys",
 return physWorld; // we must return highest mother volume.
 }
 //************************************************************SOME SPECIFIC FUNCTION FOR SENSITIVE DETECTOR OR MULTITHREADING, I AM NOT SURE*****************************************************//
-//void MyDetectorConstruction::ConstructSDandField()
-//{MySensitiveDetector *sensDet = new MySensitiveDetector("SensitiveDetector");//this is object of sensitive class
-//logicDetector->SetSensitiveDetector(sensDet);}
+void MyDetectorConstruction::ConstructSDandField()
+{MySensitiveDetector *sensDet = new MySensitiveDetector("SensitiveDetector");//this is object of sensitive class
+logicDetector->SetSensitiveDetector(sensDet);}
