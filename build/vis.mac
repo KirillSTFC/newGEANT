@@ -1,4 +1,5 @@
-/run/initialize
+/detector/LeadThick {thick}
+/run/reinitializeGeometry
 /gps/particle gamma
 /gps/pos/centre 0. 0 -0.5 m
 /gps/direction 0 0 1
@@ -8,14 +9,60 @@
 /gps/pos/radius 0.0000000000001 um
 /gps/ang/type iso
 /gps/ang/maxtheta 1. deg
-/gps/energy 0.1 MeV
-/vis/open OGL
-/vis/viewer/set/viewpointVector 0.8 0.8 1
-/vis/drawVolume
-/vis/viewer/set/autoRefresh true
-/vis/scene/add/trajectories smooth
-/vis/scene/add/scale 100 cm z 0 0 1 #//add scale
-/vis/scene/add/axes #add axes
-/vis/scene/add/eventID
-/vis/scene/endOfEventAction accumulate 100 runs#//accumulate all runs
+/gps/energy 0.01 MeV
+#/vis/open OGL
+#/vis/viewer/set/viewpointVector 0.8 0.8 1
+#/vis/drawVolume
+#/vis/viewer/set/autoRefresh true
+#/vis/scene/add/trajectories smooth
+#/vis/scene/add/scale 100 cm z 0 0 1 #//add scale
+#/vis/scene/add/axes #add axes
+#/vis/scene/add/eventID
+#/vis/scene/endOfEventAction accumulate 100 runs#//accumulate all runs
 /run/beamOn 700
+
+/detector/LeadThick {thick}
+/run/reinitializeGeometry
+/gps/particle gamma
+/gps/pos/centre 0. 0 -0.5 m
+/gps/direction 0 0 1
+/gps/pos/type Plane
+/gps/pos/sigma_r .2 mm
+/gps/pos/shape Circle
+/gps/pos/radius 0.0000000000001 um
+/gps/ang/type iso
+/gps/ang/maxtheta 1. deg
+/gps/energy 0.01 MeV
+#/vis/open OGL
+#/vis/viewer/set/viewpointVector 0.8 0.8 1
+#/vis/drawVolume
+#/vis/viewer/set/autoRefresh true
+#/vis/scene/add/trajectories smooth
+#/vis/scene/add/scale 100 cm z 0 0 1 #//add scale
+#/vis/scene/add/axes #add axes
+#/vis/scene/add/eventID
+#/vis/scene/endOfEventAction accumulate 100 runs#//accumulate all runs
+/run/beamOn 1500
+
+/detector/LeadThick {thick}
+/run/reinitializeGeometry
+/gps/particle gamma
+/gps/pos/centre 0. 0 -0.5 m
+/gps/direction 0 0 1
+/gps/pos/type Plane
+/gps/pos/sigma_r .2 mm
+/gps/pos/shape Circle
+/gps/pos/radius 0.0000000000001 um
+/gps/ang/type iso
+/gps/ang/maxtheta 1. deg
+/gps/energy 0.01 MeV
+#/vis/open OGL
+#/vis/viewer/set/viewpointVector 0.8 0.8 1
+#/vis/drawVolume
+#/vis/viewer/set/autoRefresh true
+#/vis/scene/add/trajectories smooth
+#/vis/scene/add/scale 100 cm z 0 0 1 #//add scale
+#/vis/scene/add/axes #add axes
+#/vis/scene/add/eventID
+#/vis/scene/endOfEventAction accumulate 100 runs#//accumulate all runs
+/run/beamOn 3000
